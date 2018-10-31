@@ -1,0 +1,23 @@
+package com.fanxl.order.config;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
+
+/**
+ * @description
+ * @author: fanxl
+ * @date: 2018/10/26 0026 18:08
+ */
+@Configuration
+public class RestTemplateConfig {
+
+
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+}
