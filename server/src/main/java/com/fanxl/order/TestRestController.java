@@ -1,7 +1,7 @@
 package com.fanxl.order;
 
-import com.fanxl.order.client.ProductClient;
-import com.fanxl.order.common.ProductInfoOutput;
+import com.fanxl.product.client.ProductClient;
+import com.fanxl.product.common.ProductInfoOutput;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

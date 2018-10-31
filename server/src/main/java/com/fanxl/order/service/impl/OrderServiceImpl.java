@@ -1,8 +1,5 @@
 package com.fanxl.order.service.impl;
 
-import com.fanxl.order.client.ProductClient;
-import com.fanxl.order.common.DecreaseStockInput;
-import com.fanxl.order.common.ProductInfoOutput;
 import com.fanxl.order.dataobject.OrderDetail;
 import com.fanxl.order.dataobject.OrderMaster;
 import com.fanxl.order.dto.OrderDTO;
@@ -12,6 +9,9 @@ import com.fanxl.order.repository.OrderDetailRepository;
 import com.fanxl.order.repository.OrderMasterRepository;
 import com.fanxl.order.service.OrderService;
 import com.fanxl.order.utils.KeyUtil;
+import com.fanxl.product.client.ProductClient;
+import com.fanxl.product.common.DecreaseStockInput;
+import com.fanxl.product.common.ProductInfoOutput;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
