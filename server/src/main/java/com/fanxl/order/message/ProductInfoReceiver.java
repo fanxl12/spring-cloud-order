@@ -31,9 +31,10 @@ public class ProductInfoReceiver {
         log.info("productInfoOutput-message:{}", message);
         List<ProductInfoOutput> productInfoOutputList = JsonTool.fromJson(new TypeReference<List<ProductInfoOutput>>() {}, message);
         log.info("productInfoOutput:{}", productInfoOutputList);
-        ProductInfoOutput p = productInfoOutputList.get(0);
-        stringRedisTemplate.opsForValue().set(String.format(PRODUCT_STOCK_TEMPLATE, p.getProductId()),
-                String.valueOf(p.getProductStock()));
+        productInfoOutputList.forEach(p -> {
+            stringRedisTemplate.opsForValue().set(String.format(PRODUCT_STOCK_TEMPLATE, p.getProductId()),
+                    String.valueOf(p.getProductStock()));
+        });
     }
 
 }
