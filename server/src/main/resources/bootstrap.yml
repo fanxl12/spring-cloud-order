@@ -12,6 +12,7 @@ spring:
         inputMessage:
           group: order
           content-type: application/json
+
 # eureka先加载, 如果不是默认地址同时又没配置就会失败
 eureka:
   client:
