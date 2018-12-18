@@ -3,6 +3,7 @@ package com.fanxl.order;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @description SpringCloudApplication可以代替注释的三个注解
@@ -14,6 +15,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 //@EnableDiscoveryClient
 //@EnableCircuitBreaker
 @SpringCloudApplication
+@ComponentScan(basePackages = "com.fanxl")
 public class OrderApplication {
 
     public static void main(String[] args) {
