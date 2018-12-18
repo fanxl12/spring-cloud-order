@@ -1,18 +1,19 @@
 package com.fanxl.order;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @description
+ * @description SpringCloudApplication可以代替注释的三个注解
  * @author: fanxl
  * @date: 2018/10/26 0026 11:31
  */
-@SpringBootApplication
-@EnableDiscoveryClient
 @EnableFeignClients(basePackages = "com.fanxl.product.client")
+//@SpringBootApplication
+//@EnableDiscoveryClient
+//@EnableCircuitBreaker
+@SpringCloudApplication
 public class OrderApplication {
 
     public static void main(String[] args) {
