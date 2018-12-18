@@ -18,3 +18,18 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+
+#hystrix yml配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+    # default是针对全局的设置，getProductInfoList是针对某个方法进行设置
+    getProductInfoList:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
