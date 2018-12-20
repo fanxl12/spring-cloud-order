@@ -6,15 +6,17 @@
     <groupId>com.fanxl</groupId>
     <artifactId>order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <name>order</name>
+    <description>Demo project for Spring Boot</description>
+
     <modules>
         <module>server</module>
         <module>client</module>
         <module>common</module>
     </modules>
-    <packaging>pom</packaging>
-
-    <name>order</name>
-    <description>Demo project for Spring Boot</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
